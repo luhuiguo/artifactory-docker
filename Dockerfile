@@ -1,3 +1,3 @@
-FROM docker.bintray.io/jfrog/artifactory-pro:5.4.6
+FROM docker.bintray.io/jfrog/artifactory-pro:5.5.1
 
 COPY artifactory.war /opt/jfrog/artifactory/webapps/artifactory.war
