@@ -1,12 +1,12 @@
 FROM docker.bintray.io/jfrog/artifactory-pro:7.3.2
 
-WORKDIR /opt/jfrog/artifactory/webapps
+WORKDIR /opt/jfrog/artifactory/app/artifactory/tomcat/webapps
 
 RUN jar xvf artifactory.war
 
 RUN jar xvf WEB-INF/lib/artifactory-addons-manager-7.3.2.jar
 
-COPY a.class /opt/jfrog/artifactory/webapps/org/jfrog/license/api/a.class
+COPY a.class /opt/jfrog/artifactory/app/artifactory/tomcat/webapps/org/jfrog/license/api/a.class
 
 RUN jar uf WEB-INF/lib/artifactory-addons-manager-7.3.2.jar org/jfrog/license/api/a.class
 
