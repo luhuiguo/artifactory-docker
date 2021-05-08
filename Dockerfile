@@ -8,9 +8,9 @@ RUN /opt/jfrog/artifactory/app/third-party/java/bin/jar xvf WEB-INF/lib/artifact
 
 COPY a.class /opt/jfrog/artifactory/app/artifactory/tomcat/webapps/org/jfrog/license/api/a.class
 
-RUN /opt/jfrog/artifactory/app/third-party/java/bin/ uf WEB-INF/lib/artifactory-addons-manager-7.18.6.jar org/jfrog/license/api/a.class
+RUN /opt/jfrog/artifactory/app/third-party/java/bin/jar uf WEB-INF/lib/artifactory-addons-manager-7.18.6.jar org/jfrog/license/api/a.class
 
-RUN /opt/jfrog/artifactory/app/third-party/java/bin/ uf artifactory.war WEB-INF/lib/artifactory-addons-manager-7.18.6.jar
+RUN /opt/jfrog/artifactory/app/third-party/java/bin/jar uf artifactory.war WEB-INF/lib/artifactory-addons-manager-7.18.6.jar
 
 RUN rm -rf WEB-INF
 
